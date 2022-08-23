@@ -6,7 +6,12 @@ Restricción: Utilizar el método append
 """
 
 # COMPLETAR - INICIO
-lista_01 = 
+lista_01 = []
+lista_01.append(1) 
+lista_01.append(2) 
+lista_01.append(3) 
+lista_01.append(4)
+print(lista_01)
 # COMPLETAR - FIN
 
 assert len(lista_01) == 4
@@ -20,7 +25,8 @@ Restricción: Utilizar el método pop
 lista = ["ho", "la", 81, 6, 42, "como", "estas?"]
 
 # COMPLETAR - INICIO
-
+elemento_extraido = lista.pop(6)
+print(lista)
 # COMPLETAR - FIN
 
 assert elemento_extraido == 6
@@ -36,7 +42,8 @@ lista_b = ["4", "5", "6"]
 lista_c = ["siete", "ocho", "nueve"]
 
 # COMPLETAR - INICIO
-
+listas_concatenadas_01 = lista_a.extend(lista_b, lista_c)
+print(listas_concatenadas_01)
 # COMPLETAR - FIN
 
 assert listas_concatenadas_01 == [1, 2, 3, "4", "5", "6", "siete", "ocho", "nueve"]
@@ -51,7 +58,8 @@ variable_01 = 2
 lista_nueva = [0, 1, 3, 4]
 
 # COMPLETAR - INICIO
-
+lista_nueva = lista_nueva.insert(2, 3)
+print(lista_nueva)
 # COMPLETAR - FIN
 
 assert lista_nueva == [0, 1, 2, 3, 4]
@@ -65,7 +73,9 @@ Restricción: Utilizar el método append junto al indexado simple
 lista = ["ho", 3.1416, 42, 81, 6, "la"]
 
 # COMPLETAR - INICIO
-
+lista_primero_y_ultimo = lista.append(lista[0])
+lista_primero_y_ultimo = lista.append(lista[5])
+print(lista_primero_y_ultimo)
 # COMPLETAR - FIN
 
 assert lista_primero_y_ultimo == ["ho", "la"]
@@ -79,7 +89,10 @@ Restricción: Utilizar el método append junto al indexado simple
 lista = ["ho", 3.1416, "la", 81, 6, 42]
 
 # COMPLETAR - INICIO
-
+lista_primeros = lista.append(lista[0])
+lista_primeros = lista.append(lista[1])
+lista_primeros = lista.append(lista[2])
+print(lista_primeros)
 # COMPLETAR - FIN
 
 assert lista_primeros == ["ho", 3.1416, "la"]
@@ -93,7 +106,8 @@ Restricción: Utilizar indexado múltiple
 lista = ["ho", 3.1416, "la", 81, 6, 42]
 
 # COMPLETAR - INICIO
-
+lista_primeros = lista.extend(lista[0:2])
+print(lista_primeros)
 # COMPLETAR - FIN
 
 assert lista_primeros == ["ho", 3.1416, "la"]
@@ -108,6 +122,9 @@ Restricción: Utilizar el método extend junto al indexado múltiple
 lista = ["ho", "la", 81, 6, 42, "como", "estas?"]
 
 # COMPLETAR - INICIO
+lista_primeros_y_ultimos = lista.extend(lista[ :1])
+lista_primeros_y_ultimos = lista.extend(lista[5:])
+print(lista_primeros_y_ultimos)
 
 # COMPLETAR - FIN
 
@@ -123,7 +140,8 @@ lista_01 = [0, 1, 2, 3]
 lista_02 = [5, 6]
 
 # COMPLETAR - INICIO
-
+lista_concatenada = str(lista_01) + str(lista_02)
+print(lista_concatenada)
 # COMPLETAR - FIN
 
 assert lista_concatenada == [0, 1, 2, 3, 5, 6]
@@ -137,7 +155,8 @@ Restricción: Utiliar el operador *
 lista_01 = [0, 1, 0, 1, 0, 1]
 
 # COMPLETAR - INICIO
-
+lista_duplicada = str(lista_01) * 3
+print(lista_duplicada)
 # COMPLETAR - FIN
 
 assert lista_duplicada == [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]

@@ -1,0 +1,4 @@
+1: git add . (para agregar todos los archivos)
+2: git git commit -m "mensaje"
+3: git status
+4: git push
