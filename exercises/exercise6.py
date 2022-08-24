@@ -25,8 +25,8 @@ Restricción: Utilizar el método pop
 lista = ["ho", "la", 81, 6, 42, "como", "estas?"]
 
 # COMPLETAR - INICIO
-elemento_extraido = lista.pop(6)
-print(lista)
+elemento_extraido = lista.pop(3)
+print(elemento_extraido)
 # COMPLETAR - FIN
 
 assert elemento_extraido == 6
@@ -42,7 +42,8 @@ lista_b = ["4", "5", "6"]
 lista_c = ["siete", "ocho", "nueve"]
 
 # COMPLETAR - INICIO
-listas_concatenadas_01 = lista_a.extend(lista_b, lista_c)
+lista_b = lista_b.extend(lista_c)
+listas_concatenadas_01 = lista_a.extend(lista_b)
 print(listas_concatenadas_01)
 # COMPLETAR - FIN
 
@@ -58,7 +59,7 @@ variable_01 = 2
 lista_nueva = [0, 1, 3, 4]
 
 # COMPLETAR - INICIO
-lista_nueva = lista_nueva.insert(2, 3)
+lista_nueva = lista_nueva.insert(2, variable_01)
 print(lista_nueva)
 # COMPLETAR - FIN
 
@@ -74,7 +75,7 @@ lista = ["ho", 3.1416, 42, 81, 6, "la"]
 
 # COMPLETAR - INICIO
 lista_primero_y_ultimo = lista.append(lista[0])
-lista_primero_y_ultimo = lista.append(lista[5])
+lista_primero_y_ultimo = lista.append(lista[6])
 print(lista_primero_y_ultimo)
 # COMPLETAR - FIN
 
@@ -155,7 +156,7 @@ Restricción: Utiliar el operador *
 lista_01 = [0, 1, 0, 1, 0, 1]
 
 # COMPLETAR - INICIO
-lista_duplicada = str(lista_01) * 3
+lista_duplicada = str(lista_01) + str(lista_01) + str(lista_01)
 print(lista_duplicada)
 # COMPLETAR - FIN
 
@@ -171,7 +172,11 @@ elemento = 1.0
 lista = [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1.0, 1, 0, 1, 0, 1]
 
 # COMPLETAR - INICIO
-
+if elemento in float(lista):
+    variable_booleana = True
+else:
+    variable_booleana = False
+print(variable_booleana)
 # COMPLETAR - FIN
 
 assert variable_booleana
@@ -186,7 +191,11 @@ lista_01 = [1, 2, 3, 4.5, 6, 7]
 lista_02 = [1, 3, 2, 4, 5, 6, 7]
 
 # COMPLETAR - INICIO
-
+if lista_01 == lista_02:
+    son_iguales = True
+else:
+    son_iguales = False
+print(son_iguales)
 # COMPLETAR - FIN
 
 assert not son_iguales
@@ -202,7 +211,11 @@ Restricción: Utilizar el método any
 notas = [False, False, False, False, False, False, False, False, False]
 
 # COMPLETAR - INICIO
-
+if any(notas):
+    no_tiene_examenes_aprobados = True
+else:
+    no_tiene_examenes_aprobados = False
+print(no_tiene_examenes_aprobados)
 # COMPLETAR - FIN
 
 assert no_tiene_examenes_aprobados
@@ -218,7 +231,11 @@ Restricción: Utilizar el método all
 notas = [True, True, False, True, True, True, True, True, True, True, True, True]
 
 # COMPLETAR - INICIO
-
+if all(notas):
+    tiene_todo_aprobado = True
+else:
+    tiene_todo_aprobado = False
+print(tiene_todo_aprobado)
 # COMPLETAR - FIN
 
 assert not tiene_todo_aprobado
