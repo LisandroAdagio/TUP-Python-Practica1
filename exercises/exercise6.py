@@ -42,8 +42,10 @@ lista_b = ["4", "5", "6"]
 lista_c = ["siete", "ocho", "nueve"]
 
 # COMPLETAR - INICIO
-lista_b = lista_b.extend(lista_c)
-listas_concatenadas_01 = lista_a.extend(lista_b)
+listas_concatenadas_01 = [] 
+listas_concatenadas_01.extend(lista_a)
+listas_concatenadas_01.extend(lista_b)
+listas_concatenadas_01.extend(lista_c)
 print(listas_concatenadas_01)
 # COMPLETAR - FIN
 
@@ -59,7 +61,7 @@ variable_01 = 2
 lista_nueva = [0, 1, 3, 4]
 
 # COMPLETAR - INICIO
-lista_nueva = lista_nueva.insert(2, variable_01)
+lista_nueva.insert(2, variable_01)
 print(lista_nueva)
 # COMPLETAR - FIN
 
@@ -74,8 +76,9 @@ Restricción: Utilizar el método append junto al indexado simple
 lista = ["ho", 3.1416, 42, 81, 6, "la"]
 
 # COMPLETAR - INICIO
-lista_primero_y_ultimo = lista.append(lista[0])
-lista_primero_y_ultimo = lista.append(lista[6])
+lista_primero_y_ultimo = []
+lista_primero_y_ultimo.append(lista[0])
+lista_primero_y_ultimo.append(lista[len(lista)-1])
 print(lista_primero_y_ultimo)
 # COMPLETAR - FIN
 
@@ -90,9 +93,10 @@ Restricción: Utilizar el método append junto al indexado simple
 lista = ["ho", 3.1416, "la", 81, 6, 42]
 
 # COMPLETAR - INICIO
-lista_primeros = lista.append(lista[0])
-lista_primeros = lista.append(lista[1])
-lista_primeros = lista.append(lista[2])
+lista_primeros = []
+lista_primeros.append(lista[0])
+lista_primeros.append(lista[1])
+lista_primeros.append(lista[2])
 print(lista_primeros)
 # COMPLETAR - FIN
 
@@ -107,7 +111,8 @@ Restricción: Utilizar indexado múltiple
 lista = ["ho", 3.1416, "la", 81, 6, 42]
 
 # COMPLETAR - INICIO
-lista_primeros = lista.extend(lista[0:2])
+lista_primeros = []
+lista_primeros.extend(lista[0:3])
 print(lista_primeros)
 # COMPLETAR - FIN
 
@@ -123,8 +128,9 @@ Restricción: Utilizar el método extend junto al indexado múltiple
 lista = ["ho", "la", 81, 6, 42, "como", "estas?"]
 
 # COMPLETAR - INICIO
-lista_primeros_y_ultimos = lista.extend(lista[ :1])
-lista_primeros_y_ultimos = lista.extend(lista[5:])
+lista_primeros_y_ultimos = []
+lista_primeros_y_ultimos.extend(lista[0:2])
+lista_primeros_y_ultimos.extend(lista[len(lista)-2:len(lista)])
 print(lista_primeros_y_ultimos)
 
 # COMPLETAR - FIN
@@ -141,7 +147,8 @@ lista_01 = [0, 1, 2, 3]
 lista_02 = [5, 6]
 
 # COMPLETAR - INICIO
-lista_concatenada = str(lista_01) + str(lista_02)
+lista_concatenada = []
+lista_concatenada = lista_01 + lista_02
 print(lista_concatenada)
 # COMPLETAR - FIN
 
@@ -156,7 +163,8 @@ Restricción: Utiliar el operador *
 lista_01 = [0, 1, 0, 1, 0, 1]
 
 # COMPLETAR - INICIO
-lista_duplicada = str(lista_01) + str(lista_01) + str(lista_01)
+lista_duplicada = []
+lista_duplicada = lista_01 * 3
 print(lista_duplicada)
 # COMPLETAR - FIN
 
@@ -172,10 +180,7 @@ elemento = 1.0
 lista = [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1.0, 1, 0, 1, 0, 1]
 
 # COMPLETAR - INICIO
-if elemento in float(lista):
-    variable_booleana = True
-else:
-    variable_booleana = False
+variable_booleana = elemento in(lista)
 print(variable_booleana)
 # COMPLETAR - FIN
 
@@ -191,10 +196,7 @@ lista_01 = [1, 2, 3, 4.5, 6, 7]
 lista_02 = [1, 3, 2, 4, 5, 6, 7]
 
 # COMPLETAR - INICIO
-if lista_01 == lista_02:
-    son_iguales = True
-else:
-    son_iguales = False
+son_iguales = lista_01 == lista_02
 print(son_iguales)
 # COMPLETAR - FIN
 
@@ -211,10 +213,7 @@ Restricción: Utilizar el método any
 notas = [False, False, False, False, False, False, False, False, False]
 
 # COMPLETAR - INICIO
-if any(notas):
-    no_tiene_examenes_aprobados = True
-else:
-    no_tiene_examenes_aprobados = False
+no_tiene_examenes_aprobados = not any(notas)
 print(no_tiene_examenes_aprobados)
 # COMPLETAR - FIN
 
@@ -231,10 +230,7 @@ Restricción: Utilizar el método all
 notas = [True, True, False, True, True, True, True, True, True, True, True, True]
 
 # COMPLETAR - INICIO
-if all(notas):
-    tiene_todo_aprobado = True
-else:
-    tiene_todo_aprobado = False
+tiene_todo_aprobado = all(notas)
 print(tiene_todo_aprobado)
 # COMPLETAR - FIN
 
