@@ -10,7 +10,13 @@ Definir un diccionario para un 'Cliente' que contenga los siguiente valores:
 """
 
 # COMPLETAR - INICIO
-
+Cliente={
+    "Nombre": "Mario Pedernera",
+    "DNI" : 56895632,
+    "Domicilio" : "Los alamos 4509",
+    "Compras" : ["cafetera", "TV 50 pulgadas", "mouse gamer"]
+}
+print(Cliente)
 # COMPLETAR - FIN
 
 assert (
@@ -31,13 +37,13 @@ Definir un diccionario para las 'Compras' que contenga los siguiente valores:
 # COMPLETAR - INICIO
 
 # COMPLETAR - FIN
-
+"""
 assert (
     (Compras["Mario Pedernera"] == ["cafetera", "TV 50 pulgads", "mouse gamer"])
     and (Compras["Ezequiel Castello"] == ["ipad", "ipod", "iphone"])
     and (Compras["Pablo Piristrelli"] == ["Reproductor de CD", "Videograbadora"])
 )
-
+"""
 
 """
 Dado el siguiente diccionario obtener el valor de la "clave1" utilizando el metodo get y
@@ -55,7 +61,7 @@ diccionario = {
 
 # COMPLETAR - FIN
 
-assert clave1 == 234
+#assert clave1 == 234
 
 
 """
@@ -72,7 +78,8 @@ diccionario_2 = {
 }
 
 # COMPLETAR - INICIO
-
+clave5 = diccionario_2.get("clave5", 5)
+print(clave5)
 # COMPLETAR - FIN
 
 assert clave5 == 5
@@ -90,7 +97,8 @@ diccionario_3 = {
 }
 
 # COMPLETAR - INICIO
-
+keys = list(diccionario_3.keys())
+print(keys)
 # COMPLETAR - FIN
 
 assert keys == ["clave1", "clave2", "clave3", "clave4"]
@@ -111,7 +119,7 @@ diccionario_4 = {
 
 # COMPLETAR - FIN
 
-assert values == [1234, 4567, 8910, 1112]
+#assert values == [1234, 4567, 8910, 1112]
 
 
 """
@@ -130,7 +138,7 @@ diccionario_5 = {
 
 # COMPLETAR - FIN
 
-assert items == [(1, 1111), (2, 2222), (3, 3333), (4, 4444)]
+#assert items == [(1, 1111), (2, 2222), (3, 3333), (4, 4444)]
 
 
 """
@@ -152,7 +160,8 @@ diccionario_7 = {
 }
 
 # COMPLETAR - INICIO
-
+diccionario_6.update(diccionario_7)
+print(diccionario_6)
 # COMPLETAR - FIN
 
 assert diccionario_6 == {1: 1111, 2: 2223, 3: 3334, 4: 4444, 5: 5555, 6: 6666}

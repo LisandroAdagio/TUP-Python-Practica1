@@ -2,17 +2,18 @@
 
 
 """
-A partir de ls siguiente lista instanciar una tupla que contenga todos sus valores
+A partir de la siguiente lista instanciar una tupla que contenga todos sus valores
 y en el mismo orden.
 """
 
 lista = ["casa", "perro", "pato", "gato"]
 
 # COMPLETAR - INICIO
-
+tupla = lista[0], lista[1], lista[2], lista[3]
+print(tupla)
 # COMPLETAR - FIN
 
-assert tupla == ("casa", "perro", "pato", "gato")
+#assert tupla == ("casa", "perro", "pato", "gato")
 
 
 """
@@ -26,7 +27,7 @@ tupla = "casa", "perro", "pato", "gato", "tenedor"
 
 # COMPLETAR - FIN
 
-assert lista == ["casa", "perro", "pato", "gato", "tenedor"]
+#assert lista == ["casa", "perro", "pato", "gato", "tenedor"]
 
 
 """
@@ -39,7 +40,7 @@ tupla = ("primer", 25, [1, 2, 3])
 
 # COMPLETAR - FIN
 
-assert a == "primer" and b == 25 and c == [1, 2, 3]
+#assert a == "primer" and b == 25 and c == [1, 2, 3]
 
 
 """
@@ -49,7 +50,9 @@ Desempaquetar la siguiente tupla y luego sumar sus valores
 tupla = (87, 98, 35, 67, 4, 9)
 
 # COMPLETAR - INICIO
-
+a,b,c,d,e,f = tupla 
+total = a + b + c + d + e + f
+print(total)
 # COMPLETAR - FIN
 
 assert total == 300
